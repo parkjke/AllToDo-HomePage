@@ -22,7 +22,7 @@ function initBackground() {
     container.style.pointerEvents = 'none'; // Click-through
 
     // Base dark background
-    container.style.backgroundColor = '#0a0a0a';
+    // container.style.backgroundColor = '#0a0a0a'; // Removed to show CSS logo
     container.style.backgroundImage = 'radial-gradient(circle at 50% 10%, rgba(0, 230, 118, 0.05) 0%, transparent 50%)';
 
     document.body.appendChild(container);
