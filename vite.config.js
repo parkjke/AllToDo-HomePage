@@ -5,5 +5,8 @@ export default defineConfig({
         port: 5177,
         host: true
     },
+    build: {
+        outDir: 'docs'
+    },
     base: '/'
 })
