@@ -6,11 +6,10 @@
   --color-accent: #00E676;
 }
 
+
 body {
   margin: 0;
   background-color: var(--color-bg);
-  /* Restored for fallback */
-  /* background-image: radial-gradient... moved to JS */
   color: var(--color-text);
   font-family: var(--font-main);
   display: flex;
@@ -19,6 +18,24 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative; /* Ensure body matches relative context if needed, though fixed works anywhere */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/background_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5; /* 50% opacity as requested */
+  z-index: 0;
+  pointer-events: none;
 }
 
 #app {
